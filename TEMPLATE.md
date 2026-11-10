@@ -57,8 +57,9 @@ src/
 ├── layout/                布局与移动端页面过渡
 ├── pages/                 H5 页面目录
 ├── pages-pc/              PC 页面目录
-├── router/                路由定义
+├── router/                路由实例与 routes.ts 路由定义
 ├── store/                 Pinia 实例
+│   └── mudules/           状态模块目录
 ├── styles/                全局 Less 样式
 ├── type/                  全局及构建类型声明
 └── utils/
@@ -70,7 +71,7 @@ public/                    公共静态资源
 
 ## 当前工程状态
 
-路由仍按原项目规则将首页重定向到 `/pc-home-list` 或 `/home-list`，`children` 当前为空。页面目录作为骨架保留，具体业务页面及路由可在后续开发中接入。
+路由定义位于 `src/router/routes.ts`，按原项目规则将首页重定向到 `/pc-home-list` 或 `/home-list`，`children` 当前为空。页面目录作为骨架保留，具体业务页面及路由可在后续开发中接入。
 
 环境文件仍使用原有 `VITE_BASE_API` 与 `VITE_BASE_URL`。开发代理、JSBridge、jQuery 引用及现有部署路径均沿用源工程设置，使用时按实际运行环境配置。
 

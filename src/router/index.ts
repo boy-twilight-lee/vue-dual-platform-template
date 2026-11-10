@@ -1,22 +1,9 @@
-import { isDesktopDevice } from '@/hooks'
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-
-function getRedirect() {
-	return isDesktopDevice() ? '/pc-home-list' : '/home-list'
-}
-
-const routes: Array<RouteRecordRaw> = [
-	{
-		path: '/',
-		component: () => import('@/layout/index.vue'),
-		redirect: getRedirect,
-		children: []
-	}
-]
+import { createRouter, createWebHistory } from 'vue-router'
+import { routes } from './routes'
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
-	routes
+	routes: routes
 })
 
 router.beforeEach(() => {})

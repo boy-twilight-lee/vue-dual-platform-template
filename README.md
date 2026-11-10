@@ -79,8 +79,9 @@ vue-dual-platform-template/
 │   ├── layout/                      页面布局与移动端过渡
 │   ├── pages/                       H5 页面
 │   ├── pages-pc/                    PC 页面
-│   ├── router/                      路由定义
+│   ├── router/                      路由实例与 routes.ts 路由定义
 │   ├── store/                       Pinia 实例
+│   │   └── mudules/                 状态模块目录
 │   ├── styles/                      全局 Less 样式
 │   ├── type/                        全局类型及自动导入声明
 │   ├── utils/
@@ -101,7 +102,7 @@ vue-dual-platform-template/
 
 ## 双端页面与路由
 
-在 `src/pages/` 创建 H5 页面，在 `src/pages-pc/` 创建 PC 页面，再到 `src/router/index.ts` 的 `children` 中注册路由。沿用现有首页规则时，可分别实现 `/home-list` 和 `/pc-home-list`。
+在 `src/pages/` 创建 H5 页面，在 `src/pages-pc/` 创建 PC 页面，再到 `src/router/routes.ts` 的 `children` 中注册路由。`src/router/index.ts` 负责创建路由实例。沿用现有首页规则时，可分别实现 `/home-list` 和 `/pc-home-list`。
 
 页面可以按 `页面名/index.vue`、`index.ts` 及按需添加的 `index.less` 组织。公共模块通过入口导出，跨模块引用使用 `@/` 别名。
 

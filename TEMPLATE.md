@@ -1,6 +1,6 @@
 # Vue 双端项目迁移说明
 
-本仓库完整迁移自 `ideological-practice-platform-front` 的当前项目文件，用于复用现有 Vue PC / H5 工程。原有源代码、依赖版本、环境配置、构建插件、目录结构和 README 均按原样保留。
+本仓库完整迁移自 `ideological-practice-platform-front` 的当前项目文件，用于复用现有 Vue PC / H5 工程。源代码、依赖版本、环境配置、构建插件与目录结构均保留。迁移副本的目录名和包名统一为 `vue-dual-platform-template`，HTML 页面标题更新为“Vue 双端项目模板”，根目录 README 更新为模板使用文档。
 
 ## 迁移范围
 

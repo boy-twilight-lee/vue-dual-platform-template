@@ -1,0 +1,38 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"allowJs": true,
+		"paths": {
+			"@/*": ["./src/*"],
+			"@router/*": ["./src/router/*"],
+			"@utils/*": ["./src/utils/*"],
+			"@store/*": ["./src/store/*"],
+			"@pages/*": ["./src/pages/*"],
+			"@components/*": ["./src/components/*"],
+			"@form-components/*": [
+				"./src/pages/create-question-form/component/form-list/component/*"
+			],
+			"@assets/*": ["./src/assets/*"]
+		},
+		/* Bundler mode */
+		"resolveJsonModule": true,
+		"jsx": "preserve",
+		/* Linting */
+		"noUnusedLocals": false,
+		/* 处理ts catch需要指定err:any的问题 */
+		"useUnknownInCatchVariables": false,
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"src/**/*.js",
+		"src/**/*.jsx",
+		"src/**/*.json"
+	],
+	"exclude": ["node_modules"]
+}
